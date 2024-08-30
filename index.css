@@ -1,0 +1,31 @@
+html, body {
+    height: 100%;
+    margin: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+
+body{
+    /* background-image: url("trainstation.jpeg"); */
+    background-color:#121d3e;
+    color: white;
+    
+}
+
+
+.container{
+    display: flex; 
+    flex-direction: column;
+    /* vertical-align: middle; */
+}
+
+button{
+    width: 100%;
+    border-radius: 40px;
+    height: 70px; 
+    align-items: center;
+    margin: 10px;;
+}
