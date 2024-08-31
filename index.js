@@ -4,10 +4,19 @@ let saveEl = document.getElementById("save-el");
 let button = localStorage.getItem("counter") ? parseInt(localStorage.getItem("counter")) : 0;
 
 
-function updateCounter() {
-  document.getElementById("counter").innerText = button;
-}
 
+
+
+function updateCounter() {
+  let counterText = button === 1 ? button + " cup " : button + " cups";
+  document.getElementById("counter").innerText = counterText;
+
+  if (button >= 13) {
+    document.getElementById("congrats").innerText = "You hit the daily goal!";
+  } else {
+    document.getElementById("congrats").innerText = "Keep Sipping!";
+  }
+}
 function buttonIncrement() {
   button += 1;
   updateCounter();
@@ -22,12 +31,14 @@ function buttonDecrement() {
   localStorage.setItem("counter", button);
 }
 
+
 function resetCounter() {
 button = 0; 
 updateCounter();
 localStorage.setItem("counter", button);
 
 }
+
 
 
 document.getElementById("reset").onclick = resetCounter;

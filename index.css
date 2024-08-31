@@ -15,6 +15,10 @@ body{
     
 }
 
+#congrats{
+    font-weight: bold;
+    white-space: wrap;
+}
 
 .container{
     display: flex; 
