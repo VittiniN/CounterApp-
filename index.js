@@ -26,6 +26,10 @@ function buttonIncrement() {
 
 function buttonDecrement() {
   button -= 1;
+
+  if(button < 0){
+    button = 0; 
+  }
   updateCounter();
 
   localStorage.setItem("counter", button);
