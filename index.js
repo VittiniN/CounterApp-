@@ -13,6 +13,8 @@ function updateCounter() {
     document.getElementById("congrats").innerText = "You're on fire!";
   } else if (button >= 13) {
     document.getElementById("congrats").innerText = "You hit the daily goal!";
+  } else if (button >= 10) {
+    document.getElementById("congrats").innerText = "You almost there!"
   } else if (button <= 0) {
     document.getElementById("congrats").innerText = "Recommended: 13 cups daily!";
   } else {
