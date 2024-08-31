@@ -9,7 +9,9 @@ function updateCounter() {
   let counterText = button === 1 ? button + " cup " : button + " cups";
   document.getElementById("counter").innerText = counterText;
 
-  if (button >= 13) {
+  if (button >= 14) {
+    document.getElementById("congrats").innerText = "You're on fire!";
+  } else if (button >= 13) {
     document.getElementById("congrats").innerText = "You hit the daily goal!";
   } else if (button <= 0) {
     document.getElementById("congrats").innerText = "Recommended: 13 cups daily!";
@@ -17,7 +19,6 @@ function updateCounter() {
     document.getElementById("congrats").innerText = "Keep Sipping!";
   }
 }
-
 
 function buttonIncrement() {
   button += 1;
